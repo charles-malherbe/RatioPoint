@@ -1,0 +1,19 @@
+#################################################
+#  Created by Charles MALHERBE on 12/12/2022.   #
+#################################################
+
+CC = g++
+CFLAGS  = -g -Wall
+TARGET_RATIO = Ratio
+TARGET_POINT = Point
+
+all: $(TARGET_POINT) $(TARGET_RATIO)
+
+$(TARGET_POINT): $(TARGET_POINT).cpp
+	$(CC) $(CFLAGS) -o $(TARGET_POINT) $(TARGET_POINT).c
+
+$(TARGET_RATIO): $(TARGET_RATIO).cpp
+	$(CC) $(CFLAGS) -o $(TARGET_RATIO) $(TARGET_RATIO).c
+
+clean:
+	$(RM) $(TARGET_RATIO) $(TARGET_POINT)
